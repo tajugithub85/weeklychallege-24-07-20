@@ -1,0 +1,21 @@
+
+Weekly Challenges
+
+function MinCost(cost){ //function declaration
+  ariable de
+var max = 100;// variable claration and assign value of 100 as a maximum
+let array =[]; //variable claration and assign value of empty array
+ for(let i =0; i< cost.length; i++){ // open the loop to go through the rows
+  for(let j =0; j< cost[i].length; j++){ // it loop through ecach component
+  if(cost[i][j] <max && array[i-1]!==cost[i][j]){ // compare the cost of each materia
+  array[i] =cost[i][j];// insert a new array fter the condition 
+  max = cost[i][j];// reasign the total to maximum cost
+  
+}
+}
+max = 100;
+}
+const reduced = array.reduce((total,number) => total +number);   
+ return reduced; // return the min cost of all the house
+}
+console.log(MinCost([[1,3,5],[1,4,3],[6,10,7]]));// console.log the total minimum cost for  all houses
