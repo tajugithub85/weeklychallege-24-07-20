@@ -1,21 +1,41 @@
 
-Weekly Challenges
+weekly assignment 24/07/202
+This week, you learned:
 
-function MinCost(cost){ //function declaration
-  ariable de
-var max = 100;// variable claration and assign value of 100 as a maximum
-let array =[]; //variable claration and assign value of empty array
- for(let i =0; i< cost.length; i++){ // open the loop to go through the rows
-  for(let j =0; j< cost[i].length; j++){ // it loop through ecach component
-  if(cost[i][j] <max && array[i-1]!==cost[i][j]){ // compare the cost of each materia
-  array[i] =cost[i][j];// insert a new array fter the condition 
-  max = cost[i][j];// reasign the total to maximum cost
+Nested Data Structures
+Higher Order Functions, Timer and Closure
+
+YOUR TASK
+Write a function minCost which:
+has a parameter cost:  a 2-dimensional array of integers where cost[i][j] denotes the cost of using the jth material on the ith house, and
+returns minimumCost (an integer which is the minimum cost to build all the houses in the neighborhood)
+
+Constraints
+1 ≤ n ≤ 100
+0 ≤ cost[i][j] ≤ 100
+
+Solution
+function MinCost(cost){ 
+  var total = 0;
+var max = 100;
+let array =[]; 
+ for(let i =0; i< cost.length; i++){  
+  for(let j =0; j< cost[i].length; j++){  
+  if(cost[i][j] <max && array[i-1]!==cost[i][j]){ 
+  array[i] =cost[i][j];
+   max = cost[i][j];
   
 }
+    
+} 
+ max = 100;
+  
 }
-max = 100;
+
+array.forEach(function(v){
+  
+    total += v
+   })
+   return total ;
 }
-const reduced = array.reduce((total,number) => total +number);   
- return reduced; // return the min cost of all the house
-}
-console.log(MinCost([[1,3,5],[1,4,3],[6,10,7]]));// console.log the total minimum cost for  all houses
+console.log(MinCost([[1,2,3],[1,2,3],[1,3,3]]));// console.log the total minimum cost for  all houses
